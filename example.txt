@@ -1,1 +1,12 @@
 Ivana Git learning commands
+
+git status
+git add "filename"
+git add .
+git add *.txt
+git commit -m "msg"
+git status
+git log
+git push
+git remote -v
+after modify: git add or git commit -a 
