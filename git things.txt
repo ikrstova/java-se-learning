@@ -1,1 +1,12 @@
  To make it easier to deal with merge conflicts, you can use the command git mergetool to use a merge tool, such as WinMerge or another popular merge tool.
+
+when on "newbranch" to merge on master:
+git checkout master
+git merge "newbranch"
+git push
+
+now can delete "newbranch"
+locally
+git branch -d "newbranch"
+remotely which was added by git push origin --set-upstream "newbranch"
+git push origin --delete "newbranch" 
