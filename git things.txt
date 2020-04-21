@@ -1,0 +1,1 @@
+ To make it easier to deal with merge conflicts, you can use the command git mergetool to use a merge tool, such as WinMerge or another popular merge tool.
