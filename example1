@@ -1,1 +1,9 @@
 file from origin
+
+git branch "newbranch"
+git checkout "newbranch"
+git branch
+git branch -a
+git push --set-upstream origin "newbranch"
+git checkout master
+
