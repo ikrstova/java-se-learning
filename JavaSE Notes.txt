@@ -1,0 +1,57 @@
+links i have really to learn: (they are really most important)
+https://www.journaldev.com/1854/java-web-application-tutorial-for-beginners
+https://docs.oracle.com/javaee/6/tutorial/doc/bnadp.html
+https://www.journaldev.com/9170/restful-web-services-tutorial-java
+began maven primer: https://mkyong.com/maven/how-to-create-a-java-project-with-maven/
+Java:
+Volatile and transient can be applied only to instance variables.
+In arrays its size is calulated and acomulated by the jvm only when creating instance of it.
+Method local inner classes (we'll explore this in Chapter 8), Inner class methods and instance variables, Local variables can not be static.
+Enums can not be created within a method.
+Declaring things inslide a class is similar as declaring inside the file. The diference is when declaring inside a method.
+Enum is java class with constants only. So CoffeSize.BIG is accessed from static and instance method because the value is actually static member of the class, so it is not tidly coupled with the class.
+In methods (static or instance) is where the things get different for declarations other then simple types.
+Protected elements of one class can be accessed from all in the same package and ofcourse from the classes that inherit it!!!
+public static final CoffeeSize BIG = new CoffeeSize("BIG", 0);
+Classes can have only default or public modifier (outer classes)
+The class that implements an interface method does not have to declare the excaptions from the interface. But signiture and return type must be the same.
+Also for the subclass.
+So @Override means same signiture and return type (in some prev versions return type can be different, but here Intellij complains).
+While overload means only same name but diferent signiture (does not care about the return type cares only about the signiture).
+Inner classes and its siblings can be static etc but outer can not (only default or public or final or abstract)
+If a class can not be accessed then its members also can not be accessed.
+Classes are never static (outer classes) so that is way into a static void main instances of a class are created.
+Benefits of OO: flexibility and maintainability
+Benefits of inheritance: polimorphism and code re-use
+Reference var can refernce the class or its subclasses (by all is-a) and same can reference interface or any its class implementations.
+When override the access modifier can not be weaker then the parent one.
+Covariant return! or type that is-a of base type.
+Polymorphic method invocations apply only to instance methods. You can
+always refer to an object with a more general reference variable type (a superclass or interface), but at runtime, the ONLY things that are dynamically
+selected based on the actual object (rather than the reference type) are instance
+methods. Not static methods. Not variables. Only overridden instance methods are dynamically invoked based on the real object's type.
+When referencing by more general type or an interface then only the overridden method can be accessed by instance type, not other that is not in the reference type. And it sees the general impl, for example if the interface throws an excaption then the instance has to throw the exception even it is not trowing it in its class definition.
+Low coupling means the classes to comunicate throuth interfaces and the details of the implementations to be hidden (Encapsulation). Failure of one to not make the dependent to fail.
+High cohasion means the class to be more focused then to do more things. The benefits are: easy to maintain less changes there, and more reused.
+static methods can't be overridden, but they can be redefined
+Serialization is powerful. When class is seriazable also the reference elements classes has to be seriazable, if not they have to be marked as transient or the main class to implement readObject and writeObject methods with calling defaultSer..(). When the parent is seriazable then all childs are seriazable by IS-A relation. (All subclasses implements implicitelly the interfaces of its parent classes)
+When the child is serializable and the parent is not then when deserialize the parent constructors will be invoked and have state from them.
+Interfaces: Collection, List, Queue, Set, SortedSet, NavigableSet, Map, SortedMap, NavigableMap
+Implementations: HashMap, LinkedHashMap, TreeMap, Hashtable, HashSet, LinkedHashSet, TreeSet, ArrayList, LinkedList, Vector, PriorityQueue, Collections, Arrays 
+**Linked**collections are ordered always. 
+Chose ArrayList when you need interation or indexing but use LinkedList when you need insertion, deletation.
+Java Generics:
+They are used for avoiding mistakes in runtime like ClassCastException etc. So they are used only for compile time (T types), then they are converted to Object at runtime. The left side of the declaration is a constraint, and the right side of the declaration is what is used for T in the class definition. 
+There are 4 types of generic constraints. They are:
+Cat<Integer> only this type can be used in the implementaion = new Cat<Integer>().
+Cat<?> any type can be used in the impl. = new Cat<Double>(), = new Cat<String>().
+Cat<? extends Number> where ? is Number or its subtypes. = new Cat<Double>().
+Cat<? super Integer> where ? is Integer or its supertypes. = new Cat<Number>(), new Cat<Object>();
+Generics can not be used with primitives.
+Switsch must resolve into short, ..., int or enum
+While must resolve into boolean
+
+
+
+
+
