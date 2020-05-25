@@ -1,7 +1,7 @@
 Ivana Git learning commands
 
 git status
-git add "filename"
+git add "filename" 
 git add .
 git add *.txt
 git commit -m "msg"
@@ -11,3 +11,10 @@ git push
 git remote -v
 after modify: git add or git commit -a 
  (use "git restore <file>..." to discard changes in working directory)
+ 
+ how to write in vim:
+ 1. write your message, optionally make a empty line bellow
+ 2. press esq
+ 3. write :wq to save and exit
+ 
+ 
