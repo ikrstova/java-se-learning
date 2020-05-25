@@ -10,3 +10,4 @@ git log
 git push
 git remote -v
 after modify: git add or git commit -a 
+ (use "git restore <file>..." to discard changes in working directory)
